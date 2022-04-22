@@ -32,8 +32,8 @@ public class Program {
 		int n = sc.nextInt();
 		
 		for (int i=0; i<n; i++) {
-			System.out.println("Enter contract #" + i +" data:");
-			System.out.print("Date (DD/MM/YYYY) : ");
+			System.out.println("Enter contract #" + i+1 +" data:");
+			System.out.print("Date (DD/MM/YYYY): ");
 			String data1 = sc.next();
 			LocalDate contractDate = LocalDate.parse(data1, DateTimeFormatter.ofPattern("dd/MM/yyyy"));
 			System.out.print("Value per hour: ");
@@ -51,28 +51,8 @@ public class Program {
 		int year = Integer.parseInt(monthAndYear.substring(3));
 		
 		System.out.println("Name: " + worker.getName());
-		System.out.println("Department" + worker.getDepartment().getName());
-		System.out.println("Income for " + monthAndYear + ": " + String.format("%.2f", worker.income(year, month)));
-		
-		
-
-
-
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
+		System.out.println("Department " + worker.getDepartment().getName());
+		System.out.println("Income for " + monthAndYear + ": " + "$" + String.format("%.2f", worker.income(year, month)));
 		
 		
 		sc.close();
